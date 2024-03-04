@@ -11,7 +11,7 @@ public class RotateCamera : MonoBehaviour
         
     }
 
-    //Sağ ve sol inputu ile kamerayı döndürmeyi sağlar.
+    //SaÄŸ ve sol inputu ile kamerayÄ± dÃ¶ndÃ¼rmeyi saÄŸlar.
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
