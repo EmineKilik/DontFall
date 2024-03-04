@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
         SpawnPowerup();
     }
 
-    //Düşmanlar düşürüldükçe sayısını arttırarak spawnlanmasını sağlar.
+    //DÃ¼ÅŸmanlar dÃ¼ÅŸÃ¼rÃ¼ldÃ¼kÃ§e sayÄ±sÄ±nÄ± arttÄ±rarak spawnlanmasÄ±nÄ± saÄŸlar.
     void Update()
     {
         enemyCount = FindObjectsOfType<Enemy>().Length;
@@ -29,7 +29,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    //Düşmanlar oluşturur.
+    //DÃ¼ÅŸmanlar oluÅŸturur.
     void SpawnEnemyWave(int enemiesToSpawn)
     {
         for (int i = 0; i < enemiesToSpawn; i++)
@@ -38,13 +38,13 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    //Powerup oluşturur.
+    //Powerup oluÅŸturur.
     void SpawnPowerup()
     {
         Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
     }
 
-    //Düşman için random bir konum verir.
+    //DÃ¼ÅŸman iÃ§in random bir konum verir.
     private Vector3 GenerateSpawnPosition()
     {
         float spawnPosX = Random.Range(-spawnRange, spawnRange);
