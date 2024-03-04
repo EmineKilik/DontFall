@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    //Düşmanın oyuncuyu takip etmesini sağlar. Normalize edilmezse düşmanın uzaklığı arttıkça çarpma hızı da artar.
+    //DÃ¼ÅŸmanÄ±n oyuncuyu takip etmesini saÄŸlar. Normalize edilmezse dÃ¼ÅŸmanÄ±n uzaklÄ±ÄŸÄ± arttÄ±kÃ§a Ã§arpma hÄ±zÄ± da artar.
     void Update()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
