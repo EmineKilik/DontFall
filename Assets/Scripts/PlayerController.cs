@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         focalPoint = GameObject.Find("Focal Point");
     }
 
-    //Kamera yönüne göre ileri geri hareket sağlar.
+    //Kamera yÃ¶nÃ¼ne gÃ¶re ileri geri hareket saÄŸlar.
     void Update()
     {
         float forwardInput = Input.GetAxis("Vertical");
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         powerupIndicator.transform.position = transform.position + new Vector3(0,-0.5F,0);
     }
 
-    //Powerup alındığında efekt gösterir. 
+    //Powerup alÄ±ndÄ±ÄŸÄ±nda efekt gÃ¶sterir. 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Powerup"))
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //Powerup alındıktan sonra bir süre bekleyip powerup etkisini bırakır.
+    //Powerup alÄ±ndÄ±ktan sonra bir sÃ¼re bekleyip powerup etkisini bÄ±rakÄ±r.
     IEnumerator PowerupCountdownRoutine()
     {
         yield return new WaitForSeconds(7);
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         powerupIndicator.SetActive(false);
     }
 
-    //Powerup alınmışsa düşmana çarptığında oyuncudan uzaklaştırmayı sağlar.
+    //Powerup alÄ±nmÄ±ÅŸsa dÃ¼ÅŸmana Ã§arptÄ±ÄŸÄ±nda oyuncudan uzaklaÅŸtÄ±rmayÄ± saÄŸlar.
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && hasPowerup)
